@@ -1,7 +1,10 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/rgb.h>
 
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/ext_power.h>
 / {
     chosen { zmk,matrix-transform = &imprint_function_row; };
 
@@ -16,7 +19,7 @@
         double_l_bkt: double_l_bkt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp RBKT &kp RBKT>;
+            bindings = <&kp RBKT &kp RBKT>;
 
             label = "DOUBLE_L_BKT";
         };
