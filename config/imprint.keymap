@@ -16,7 +16,7 @@
         double_l_bkt: double_l_bkt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp RBKT &kp RBKT>;
+            bindings = <&kp RBKT &kp RBKT>;
 
             label = "DOUBLE_L_BKT";
         };
@@ -41,14 +41,14 @@
 
         default_layer {
             bindings = <
-&kp CAPS            &kp F1       &kp F2           &kp F3          &kp F4         &kp F5                            &kp F6         &kp F7        &kp F8          &kp F9          &kp F10         &kp F11
-&kp EQUAL           &kp N1       &kp N2           &kp N3          &kp N4         &kp N5                            &kp N6         &kp N7        &kp N8          &kp N9          &kp N0          &kp MINUS
-&kp TAB             &kp Q        &kp W            &kp E           &kp R          &kp T                             &kp Y          &kp U         &kp I           &kp O           &kp P           &kp BSLH
-&kp ESC             &mt LSHFT A  &mt LCTRL S      &mt LALT D      &mt LGUI F     &kp G                             &kp H          &mt RGUI J    &mt RALT K      &mt RCTRL L     &mt RSHFT SEMI  &kp SQT
-&mt LSHFT LC(LEFT)  &kp Z        &kp X            &kp C           &kp V          &kp B                             &kp N          &kp M         &kp COMMA       &kp DOT         &kp FSLH        &mt RSHFT LC(RIGHT)
-                                 &mt LCTRL GRAVE  &mt LALT EQUAL                                                                                &mt RALT LBKT   &mt RCTRL RBKT
-                                                                  &kp LC(LEFT)   &kp LC(D)        &double_l_bkt    &double_r_bkt  &kp LC(U)     &kp LC(RIGHT)
-                                                                  &mt LGUI BSPC  &lt 1 LC(SLASH)  &left_bfr        &right_bfr     &lt 2 RETURN  &mt RGUI SPACE
+&kp CAPS           &kp F1       &kp F2           &kp F3          &kp F4         &kp F5                            &kp F6         &kp F7        &kp F8          &kp F9          &kp F10         &kp F11
+&kp EQUAL          &kp N1       &kp N2           &kp N3          &kp N4         &kp N5                            &kp N6         &kp N7        &kp N8          &kp N9          &kp N0          &kp MINUS
+&kp TAB            &kp Q        &kp W            &kp E           &kp R          &kp T                             &kp Y          &kp U         &kp I           &kp O           &kp P           &kp BSLH
+&kp ESC            &mt LSHFT A  &mt LCTRL S      &mt LALT D      &mt LGUI F     &kp G                             &kp H          &mt RGUI J    &mt RALT K      &mt RCTRL L     &mt RSHFT SEMI  &kp SQT
+&mt LSHFT LC(LEFT) &kp Z        &kp X            &kp C           &kp V          &kp B                             &kp N          &kp M         &kp COMMA       &kp DOT         &kp FSLH        &mt RSHFT LC(RIGHT)
+                        &mt LCTRL GRAVE  &mt LALT EQUAL                                                                                &mt RALT LBKT   &mt RCTRL RBKT
+                                                         &kp LC(LEFT)   &kp LC(D)        &kp DOUBLE_L_BKT    &kp DOUBLE_R_BKT  &kp LC(U)     &kp RC(RIGHT)
+                                                         &mt LGUI BSPC  &lt 1 LC(SLASH)  &kp LEFT_BFR        &kp RIGHT_BFR     &lt 2 RETURN  &mt RGUI SPACE
             >;
         };
 
