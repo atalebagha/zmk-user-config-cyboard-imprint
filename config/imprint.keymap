@@ -5,6 +5,10 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/ext_power.h>
 
+&mt {
+    flavor = "tap-preferred";
+};
+
 / {
     chosen { zmk,matrix-transform = &imprint_function_row;
     };
@@ -13,14 +17,14 @@
 
         default_layer {
             bindings = <
- &kp ESC    &kp F1    &kp F2    &kp F3    &kp F4  &kp F5                                         &kp F6      &kp F7     &kp F8    &kp F9   &kp F10  &kp F11
- &kp EQL    &kp N1    &kp N2    &kp N3    &kp N4  &kp N5                                         &kp N6      &kp N7     &kp N8    &kp N9   &kp N0   &kp MINUS
- &kp TAB    &kp Q     &kp W     &kp E     &kp R   &kp T                                          &kp Y       &kp U      &kp I     &kp O    &kp P    &kp BSLH
- &kp LCTRL  &kp A     &kp S     &kp D     &kp F   &kp G                                          &kp H       &kp J      &kp K     &kp L    &kp SEMI &kp SQT
- &kp LSHFT  &kp Z     &kp X     &kp C     &kp V   &kp B                                          &kp N       &kp M      &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                      &kp LGUI  &kp LALT                                                                                &kp LBKT  &kp RBKT
-                                                  &kp RET &kp DEL  &kp ESC    &kp GRAVE &kp BSPC &kp SPACE
-                                                  &mo 1   &kp HOME &kp END    &kp CAPS &kp K_APP &mo 2
+ &kp CAPS    &kp F1       &kp F2          &kp F3         &kp F4       &kp F5                                         &kp F6           &kp F7           &kp F8          &kp F9          &kp F10          &kp F11
+ &kp EQUAL   &kp N1       &kp N2          &kp N3         &kp N4       &kp N5                                         &kp N6           &kp N7           &kp N8          &kp N9          &kp N0           &kp MINUS
+ &kp TAB     &kp Q        &kp W           &kp E          &kp R        &kp T                                          &kp Y            &kp U            &kp I           &kp O           &kp P            &kp BSLH
+ &kp ESC     &mt LSHFT A  &mt LCTRL S     &mt LALT D     &mt LGUI F   &kp G                                          &kp H            &mt RGUI J       &mt RALT K      &mt RCTRL L     &mt RSHFT SEMI   &kp SQT
+ &kp LSHFT   &kp Z        &kp X           &kp C          &kp V        &kp B                                          &kp N            &kp M            &kp COMMA       &kp DOT         &kp FSLH         &kp RSHFT
+                          &mt LCTRL GRAVE &mt LALT EQUAL                                                                                               &mt RALT LBKT   &mt RCTRL RBKT
+                                                &kp LC(LEFT)   &kp LC(D)              &m_45ad9883      &m_eedee677 &kp LC(U)           &kp RC(RIGHT) 
+                                                &mt LGUI BSPC  &lt Layer__1 LC(SLASH) &m_a47b2523      &m_4d88ccbd    &lt Layer__2 RETURN &mt RGUI SPACE 
             >;
         };
 
@@ -50,4 +54,11 @@
             >;
         };
     };
+	ZMK_MACRO(m_a47b2523, wait-ms = <10>; tap-ms = <10>; bindings = <&macro_tap &kp RIGHT_BRACKET &kp RIGHT_BRACE>;)
+	ZMK_MACRO(m_ee0187f2, wait-ms = <10>; tap-ms = <10>; bindings = <&macro_tap &kp SPACE &kp S &kp S>;)
+	ZMK_MACRO(m_8c72b752, wait-ms = <10>; tap-ms = <10>; bindings = <&macro_tap &kp SPACE &kp COMMA>;)
+	ZMK_MACRO(m_45ad9883, wait-ms = <10>; tap-ms = <10>; bindings = <&macro_tap &kp LEFT_BRACKET &kp B>;)
+	ZMK_MACRO(m_eedee677, wait-ms = <10>; tap-ms = <10>; bindings = <&macro_tap &kp RIGHT_BRACKET &kp B>;)
+	ZMK_MACRO(m_0d7b49ef, wait-ms = <10>; tap-ms = <10>; bindings = <&macro_tap &kp SPACE &kp S &kp K>;)
+	ZMK_MACRO(m_4d88ccbd, wait-ms = <10>; tap-ms = <10>; bindings = <&macro_tap &kp LEFT_BRACKET &kp LEFT_BRACE>;)
 };
