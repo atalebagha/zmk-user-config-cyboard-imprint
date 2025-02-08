@@ -7,6 +7,12 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
+&mt {
+    tapping-term-ms = <200>;
+    quick-tap-ms = <300>;
+    flavor = "tap-preferred";
+};
+
 / {
     chosen { zmk,matrix-transform = &imprint_function_row; }
     macros {
@@ -45,7 +51,7 @@
 
         default_layer {
             bindings = <
-&kp CAPS            &kp F1       &kp F2           &kp F3          &kp F4         &kp F5                            &kp F6         &kp F7        &kp F8          &kp F9          &kp F10         &kp F11
+&kp CAPS            &kp F1       &kp F2           &lt 4 F3          &kp F4         &kp F5                            &kp F6         &kp F7        &kp F8          &kp F9          &kp F10         &kp F11
 &kp EQUAL           &kp N1       &kp N2           &kp N3          &kp N4         &kp N5                            &kp N6         &kp N7        &kp N8          &kp N9          &kp N0          &kp MINUS
 &kp TAB             &kp Q        &kp W            &kp E           &kp R          &kp T                             &kp Y          &kp U         &kp I           &kp O           &kp P           &kp BSLH
 &kp ESC             &mt LSHFT A  &mt LCTRL S      &mt LALT D      &mt LGUI F     &kp G                             &kp H          &mt RGUI J    &mt RALT K      &mt RCTRL L     &mt RSHFT SEMI  &kp SQT
@@ -118,7 +124,7 @@
         <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;
 
     // activate layer 3 within 500ms of the trackball moving
-    // <&zip_temp_layer 3 500>;
+        <&zip_temp_layer 3 500>;
 };
 
 //left hand trackball configuration
