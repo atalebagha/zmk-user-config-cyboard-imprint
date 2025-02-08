@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    chosen { zmk,matrix-transform = &imprint_function_row; }
+    chosen { zmk,matrix-transform = &imprint_function_row; };
     macros {
         double_r_bkt: double_r_bkt {
             compatible = "zmk,behavior-macro";
