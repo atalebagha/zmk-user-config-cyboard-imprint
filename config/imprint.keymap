@@ -66,7 +66,7 @@
 &kp ESC             &mt LSHFT A  &mt LCTRL S      &mt LALT D      &mt LGUI F     &kp G                             &kp H          &mt RGUI J    &mt RALT K      &mt RCTRL L     &mt RSHFT SEMI  &kp SQT
 &mt LSHFT LC(LEFT)  &kp Z        &kp X            &kp C           &kp V          &kp B                             &kp N          &kp M         &kp COMMA       &kp DOT         &kp FSLH        &mt RSHFT LC(RIGHT)
 &kp LC(LEFT)        &lt 2 LC(SPACE)  &mt LCTRL GRAVE  &mt LALT LEFT  &mt LGUI RIGHT                                                &mt RGUI UP    &mt RALT DOWN &mt RALT LBKT   &mt RCTRL RBKT  &kp LC(RIGHT)
-                                                                  &kp &vim_scroll_down  &kp LC(D)        &double_l_bkt    &double_r_bkt  &kp LC(U)     &kp &vim_scroll_up
+                                                                  &vim_scroll_down  &kp LC(D)        &double_l_bkt    &double_r_bkt  &kp LC(U)  &vim_scroll_up
                                                                   &mt LGUI BSPC  &lt 1 LC(SLASH)  &left_bfr        &right_bfr     &lt 2 RETURN  &mt RGUI SPACE
             >;
         };
